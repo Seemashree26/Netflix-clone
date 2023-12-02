@@ -21,7 +21,7 @@ const ProfileScreen = ({ content }) => {
                 <option value="lang2">Tamil</option>
                 <option value="lang3">Hindi</option>
               </select>
-              <Button text="Sign In" size="small" />
+              <Button text="Sign In" size="signin" />
             </div>
           </div>
           <div className="container-parent">
@@ -37,7 +37,7 @@ const ProfileScreen = ({ content }) => {
                 <Input
                   type="email"
                   placeholder={"Email address"}
-                  size={"largeInput"}
+                  size={"largeInputEmail"}
                 />
                 <Button text="Get Started" size="medium" />
               </div>

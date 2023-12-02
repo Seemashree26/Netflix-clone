@@ -1,0 +1,58 @@
+.signInForm {
+  height: 650px;
+  width: 360px;
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  background-color: black;
+  padding: 100px;
+  opacity: 0.8;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+legend {
+  font-size: 35px;
+  font-weight: 500;
+}
+.top {
+  display: grid;
+  gap: 25px;
+}
+.inputs {
+  display: grid;
+  gap: 30px;
+}
+label {
+  font-weight: 400;
+  font-size: 18px;
+}
+.mid {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+.mid a {
+  text-decoration: none;
+  color: white;
+}
+#signup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#signup h4 {
+  font-size: 21px;
+  font-weight: 300;
+}
+#signup a {
+  color: white;
+  font-size: 21px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#botVerify p {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+}
