@@ -1,5 +1,6 @@
 import Button from "../../button/Button";
 import Input from "../../input/Input";
+import { Link } from "react-router-dom";
 import "./signInForm.css";
 
 const SignInForm = () => {
@@ -27,7 +28,7 @@ const SignInForm = () => {
       <div class="bottom">
         <div id="signup">
           <h4>New to Netflix?</h4>
-          <a href="#">Sign up now.</a>
+          <Link to="/signup">Sign up now.</Link>
         </div>
         <div id="botVerify">
           <p>

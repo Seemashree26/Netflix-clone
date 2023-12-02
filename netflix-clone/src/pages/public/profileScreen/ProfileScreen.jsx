@@ -6,6 +6,7 @@ import mini from "../../../assets/images/mini.png";
 import mini2 from "../../../assets/images/mini2.png";
 import mini3 from "../../../assets/images/mini3.png";
 import mini4 from "../../../assets/images/mini4.png";
+import { Link } from "react-router-dom";
 import "./profileScreen.css";
 
 const ProfileScreen = ({ content }) => {
@@ -21,7 +22,9 @@ const ProfileScreen = ({ content }) => {
                 <option value="lang2">Tamil</option>
                 <option value="lang3">Hindi</option>
               </select>
-              <Button text="Sign In" size="signin" />
+              <Link to="/signin">
+                <Button text="Sign In" size="signin" />
+              </Link>
             </div>
           </div>
           <div className="container-parent">
@@ -39,7 +42,9 @@ const ProfileScreen = ({ content }) => {
                   placeholder={"Email address"}
                   size={"largeInputEmail"}
                 />
-                <Button text="Get Started" size="medium" />
+                <Link to="/signinform">
+                  <Button text="Get Started" size="medium" />
+                </Link>
               </div>
             </div>
           </div>

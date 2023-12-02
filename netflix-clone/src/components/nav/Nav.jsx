@@ -32,7 +32,9 @@ const Nav = () => {
             className="nav_avatar"
           />
         </Link>
-        <Button text="Sign Out" size="small" />
+        <Link to="/signout" className="nav_content">
+          <Button text="Sign Out" size="small" />
+        </Link>
       </div>
     </nav>
   );

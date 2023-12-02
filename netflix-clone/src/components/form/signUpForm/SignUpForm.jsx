@@ -1,6 +1,7 @@
 import Button from "../../button/Button";
 import Input from "../../input/Input";
 import "./signUpForm.css";
+import { Link } from "react-router-dom";
 
 const SignUpForm = () => {
   return (
@@ -17,7 +18,7 @@ const SignUpForm = () => {
       </div>
       <div className="bottom">
         <h4>Already subcribed to netflix?</h4>
-        <a href="">Sign In</a>
+        <Link to="/signin">Sign In</Link>
       </div>
     </form>
   );
