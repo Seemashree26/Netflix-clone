@@ -1,0 +1,20 @@
+.loginScreen {
+  height: 200vh;
+  width: 98.7vw;
+  background-image: url("../../assets/images/netflix\ background\ image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+}
+.logo img {
+  width: 200px;
+  height: 100px;
+  padding-left: 40px;
+}
+.grad_container {
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.3), rgb(0, 0, 0));
+}
+.container {
+  display: Flex;
+  justify-content: center;
+}
