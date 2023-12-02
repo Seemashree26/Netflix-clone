@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s ease-in;
-  background-color: black;
+  /* background-color: black; */
 }
 .nav_black {
   background-color: black;
@@ -38,4 +38,7 @@
   font-size: 21px;
   font-weight: 500;
   color: white;
+}
+.nav_content {
+  text-decoration: none;
 }
