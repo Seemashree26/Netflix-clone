@@ -1,8 +1,13 @@
-import "./Input.css";
-const Input = ({  type, value, placeholder, size }) => {
+import "./input.css";
+const Input = ({ type, value, placeholder, size }) => {
   return (
     <>
-      <input className={`${size}`} type={type} value={value} placeholder={placeholder}/>
+      <input
+        className={`${size}`}
+        type={type}
+        value={value}
+        placeholder={placeholder}
+      />
     </>
   );
 };
