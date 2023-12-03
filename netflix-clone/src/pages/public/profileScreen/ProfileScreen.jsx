@@ -1,5 +1,6 @@
 import Button from "../../../components/button/Button";
 import Input from "../../../components/input/Input";
+import Footer from "../../../components/footer/Footer";
 import Content from "../../../components/content/Content";
 import MiniCard from "../../../components/card/MiniCard";
 import mini from "../../../assets/images/mini.png";
@@ -82,6 +83,8 @@ const ProfileScreen = ({ content }) => {
           image={mini4}
         />
       </div>
+      {/* <Accordion /> */}
+      <Footer />
     </>
   );
 };
