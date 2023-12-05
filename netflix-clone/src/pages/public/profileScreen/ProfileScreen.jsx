@@ -1,6 +1,5 @@
 import Button from "../../../components/button/Button";
 import Input from "../../../components/input/Input";
-import Footer from "../../../components/footer/Footer";
 import Content from "../../../components/content/Content";
 import MiniCard from "../../../components/card/MiniCard";
 import mini from "../../../assets/images/mini.png";
@@ -43,7 +42,7 @@ const ProfileScreen = ({ content }) => {
                   placeholder={"Email address"}
                   size={"largeInputEmail"}
                 />
-                <Link to="/signinform">
+                <Link to="/signup">
                   <Button text="Get Started" size="medium" />
                 </Link>
               </div>
@@ -83,8 +82,6 @@ const ProfileScreen = ({ content }) => {
           image={mini4}
         />
       </div>
-      {/* <Accordion /> */}
-      <Footer />
     </>
   );
 };

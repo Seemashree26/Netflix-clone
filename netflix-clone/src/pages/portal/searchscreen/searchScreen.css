@@ -1,0 +1,14 @@
+.searchScreen {
+  background-color: black;
+  height: 100vh;
+}
+.search_input {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.search_content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}

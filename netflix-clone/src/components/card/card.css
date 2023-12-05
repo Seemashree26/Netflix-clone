@@ -1,99 +1,58 @@
-.icons {
-  display: flex;
-  gap: 20px;
-  padding: 10px;
-}
-.single_card {
-  width: 220px;
-  height: 150px;
+.movie-card {
   position: relative;
-  transition: box-shadow 0.3s ease;
-}
-.portrait {
-  width: 200px;
-  height: 500px;
+  min-width: 220px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.landscape {
-  width: 300px;
-  height: 170px;
-  border-radius: 10px;
-}
-.card_img {
+
+.movie-image {
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 
-.card_img > img {
-  border-radius: 3px;
-}
-
-.card_content {
-  visibility: hidden;
-  margin-top: -3px;
-  height: 100%;
-  width: 115%;
-  background-color: #141414;
-  color: white;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.single_card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.play_icon {
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-}
-.heart_icon {
-  height: 25px;
-  width: 25px;
-  cursor: pointer;
-}
-
-.movie_title {
-  padding: 0px 5px 5px 13px;
-}
-
-.card_img:hover > .card_content {
-  visibility: visible;
-  transition: 0.5s;
+.overlay {
   position: absolute;
-  z-index: 10;
-  left: -15px;
-  right: 10px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.card_img:hover > img {
-  height: 140%;
-  width: 115%;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  position: relative;
-  z-index: 1;
-  bottom: -2px;
-  left: -15px;
-  right: 10px;
+.movie-card:hover .overlay {
+  opacity: 1;
+}
+.movie-card:hover {
+  scale: 1.1;
 }
 
-.card_poster:hover {
-  box-shadow: rgba(255, 255, 255, 0.16) 0px 0px 1px 2px;
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-.card_img:hover > .card_content {
-  box-shadow: rgba(222, 218, 218, 0.16) 0px 0px 0px 0px,
-    rgba(222, 218, 218, 0.16) 0px 1px 4px, rgba(222, 218, 218, 0.16) 0px 1px 4px,
-    rgba(222, 218, 218, 0.16) 0px 1px 4px;
+.wishlist-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-.card_content:hover > .card_img {
-  box-shadow: rgba(222, 218, 218, 0.16) 0px 0px 0px 0px,
-    rgba(222, 218, 218, 0.16) 0px 1px 4px, rgba(222, 218, 218, 0.16) 0px 1px 4px,
-    rgba(222, 218, 218, 0.16) 0px 1px 4px;
+
+.wishlist-selected {
+  color: red;
+}
+.fav-buff > button {
+  margin-right: 20px;
 }

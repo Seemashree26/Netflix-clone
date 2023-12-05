@@ -1,17 +1,16 @@
 .nav {
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.5s ease-in;
-  /* background-color: black; */
 }
 .nav_black {
   background-color: black;
 }
+.nav_transparent {
+  position: absolute;
+}
+
 .nav_left {
   width: 550px;
   display: flex;
