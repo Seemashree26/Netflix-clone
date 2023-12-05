@@ -6,6 +6,7 @@ import mini from "../../../assets/images/mini.png";
 import mini2 from "../../../assets/images/mini2.png";
 import mini3 from "../../../assets/images/mini3.png";
 import mini4 from "../../../assets/images/mini4.png";
+import Accordion from "../../../components/accordion/Accordion";
 import { Link } from "react-router-dom";
 import "./profileScreen.css";
 
@@ -82,6 +83,8 @@ const ProfileScreen = ({ content }) => {
           image={mini4}
         />
       </div>
+      <Accordion />
+      <Footer />
     </>
   );
 };

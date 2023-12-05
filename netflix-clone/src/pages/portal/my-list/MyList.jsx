@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getWishlist } from "../../api/movie";
-import Card from "../../components/card/Card";
+import Card from "../../components/card/card";
 import Nav from "../../components/nav/Nav";
 import "./mylist.css";
 
