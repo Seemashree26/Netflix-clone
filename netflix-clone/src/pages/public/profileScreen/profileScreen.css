@@ -12,7 +12,8 @@
 .container {
   height: 100%;
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.3), rgb(0, 0, 0));
 }
 .container-parent {
@@ -30,7 +31,7 @@
 }
 .head {
   display: flex;
-  place-content: center space-around;
+  justify-content: space-around;
   align-items: center;
   gap: 300px;
 }
@@ -83,34 +84,26 @@
     display: none;
   }
   .heads {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 21px;
   }
 
   .getstartedbutton {
-    margin-top: 10px;
+    margin-top: 15px;
     display: grid;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
   }
   .smallHeads {
-    font-size: 13px;
+    font-size: 14px;
   }
   .paras {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 16px;
   }
-  /* .miniCard {
+  .miniCard {
     display: grid;
     justify-content: center;
-  } */
-  .contentone h1 {
-    font-size: 20px;
-    /* display: flex; */
-    /* text-align: center; */
-  }
-  .contentone p {
-    font-size: 15px;
-    /* text-align: center; */
+    align-items: end;
   }
 }

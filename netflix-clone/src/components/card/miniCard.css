@@ -21,21 +21,21 @@
   }
 }
 .contentone {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* text-align: left; */
+  text-align: left;
   gap: 20px;
 }
 .contentone h1 {
   width: 100%;
-  font-size: 45px;
+  font-size: 30px;
 }
 .contentone p {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .minicardImage {

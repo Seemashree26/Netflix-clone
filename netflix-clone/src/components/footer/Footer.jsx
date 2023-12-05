@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="footer">
         <p className="para">
           Questions? Call
-          <a href="hv">000-800-919-1694</a>
+          <a href="">000-800-919-1694</a>
         </p>
         <div className="footer-content">
           {content.map((item) => (
@@ -39,7 +39,7 @@ const Footer = () => {
               <option value="tamil">தமிழ்</option>
             </select>
           </div>
-          <p className="py">Netflix India</p>
+          <p className="netflixIndia">Netflix India</p>
         </div>
       </div>
     </>
