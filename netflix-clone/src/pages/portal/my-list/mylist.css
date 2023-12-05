@@ -1,0 +1,9 @@
+.myList {
+  background-color: black;
+  height: 100vh;
+}
+.my-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}

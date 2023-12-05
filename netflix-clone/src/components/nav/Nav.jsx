@@ -2,9 +2,9 @@ import Button from "../button/Button";
 import { Link } from "react-router-dom";
 import "./nav.css";
 
-const Nav = () => {
+const Nav = ({ background }) => {
   return (
-    <nav className="nav">
+    <nav className={`nav ${background}`}>
       <div className="nav_left">
         <img
           src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"

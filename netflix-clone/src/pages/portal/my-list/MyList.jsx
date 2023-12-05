@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getWishlist } from "../../api/movie";
 import Card from "../../components/card/Card";
 import Nav from "../../components/nav/Nav";
-import "./list.css";
+import "./mylist.css";
 
 const MyList = () => {
   const [data, setData] = useState(null);
@@ -13,7 +13,8 @@ const MyList = () => {
   return (
     <>
       <div className="myList">
-        <Nav />
+        <Nav background={"nav_black"} />
+        <h1>My List</h1>
         <div className="my-list">
           {data?.results?.map((movie, index) => (
             <Card key={index} movie={movie} />

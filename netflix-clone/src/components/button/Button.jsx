@@ -1,4 +1,4 @@
-import "./Button.css";
+import "./button.css";
 const Button = ({ text, size }) => {
   return <button className={`btn  ${size}`}>{text}</button>;
 };

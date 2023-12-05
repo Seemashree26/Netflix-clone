@@ -1,7 +1,8 @@
-.rows {
-  display: flex;
-  gap: 5px;
+.row_heading {
+  color: white;
+  text-transform: white;
 }
+
 @media screen and (max-width: 768px) {
   .rows {
     grid-template-columns: repeat(4, 1fr);
