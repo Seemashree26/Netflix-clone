@@ -34,9 +34,9 @@ const Footer = () => {
         <div className="selection">
           <div className="language-select">
             <select name="language" id="language">
-              <option value="english">English</option>
-              <option value="hindi">हिंदी</option>
-              <option value="tamil">தமிழ்</option>
+              <option value="lang1">English</option>
+              <option value="lang2">தமிழ்</option>
+              <option value="lang3">हिंदी</option>
             </select>
           </div>
           <p className="netflixIndia">Netflix India</p>

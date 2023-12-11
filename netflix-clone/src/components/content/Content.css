@@ -1,21 +1,50 @@
+.profile_content {
+  color: white;
+  font-family: sans-serif;
+  line-height: 70px;
+}
 .heads {
   font-size: 45px;
-  font-family: sans-serif;
   font-weight: 900;
-  color: white;
+  line-height: 55px;
+}
+.header {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 45px;
 }
 .smallHeads {
   font-size: 25px;
-  font-family: sans-serif;
   font-weight: 500;
-  color: white;
+  line-height: 35px;
 }
 .paras {
   font-size: 20px;
-  font-family: sans-serif;
   font-weight: 500;
-  color: white;
 }
-h3 {
-  margin-top: 10px;
+@media screen and (max-width: 375px) {
+  .profile_content {
+    line-height: 25px;
+    display: grid;
+    height: 40px;
+    width: 300px;
+    gap: 10px;
+  }
+  .heads {
+    font-size: 20px;
+    line-height: 20px;
+    height: 40px;
+    width: 290px;
+    margin-left: 30px;
+  }
+  .header {
+    font-size: 20px;
+    margin-left: -2px;
+  }
+  .smallHeads {
+    font-size: 15px;
+  }
+  .paras {
+    font-size: 15px;
+  }
 }

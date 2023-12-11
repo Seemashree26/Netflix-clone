@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { getWishlist } from "../../api/movie";
-import Card from "../../components/card/card";
-import Nav from "../../components/nav/Nav";
+import { getWishlist } from "../../../api/movie";
+import Card from "../../../components/card/Card";
+import Nav from "../../../components/nav/Nav";
 import "./mylist.css";
 
 const MyList = () => {
   const [data, setData] = useState(null);
-  console.log(data);
   useEffect(() => {
     getWishlist().then((res) => setData(res));
   }, []);

@@ -1,14 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
-import Button from "../../components/button/Button";
-import Input from "../../components/input/Input";
-import Footer from "../../components/footer/Footer";
+import { Link } from "react-router-dom";
+import Button from "../../../components/button/Button";
+import Input from "../../../components/input/Input";
+import Footer from "../../../components/footer/Footer";
 import { useState } from "react";
 import "./signUpScreen.css";
 const SignUpScreen = () => {
   const [mailId, setMailId] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigator = useNavigate();
+  // const navigator = useNavigate();
   const handleLogin = () => {
     const storedData = JSON.parse(localStorage.getItem("userData"));
 
