@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .landingPage {
   height: 95vh;
   width: 100%;
@@ -18,26 +13,23 @@
 }
 .container-parent {
   height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #icon {
-  height: 80px;
+  height: 150px;
   width: 250px;
-  background-repeat: no-repeat;
-  background-image: url("../../../assets/images/7124274_netflix_logo_icon\ \(2\).svg");
 }
-.head {
+.head_profile {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 300px;
+  padding: 10px 20px;
 }
 .dropdown {
   display: flex;
-  width: 200px;
+  width: 150px;
   justify-content: center;
   gap: 20px;
 }
@@ -56,23 +48,24 @@
   border: 1px solid white;
   padding: 3px;
 }
-.heading {
-  text-align: center;
-  line-height: 45px;
+.nav_rightside {
   display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
+  gap: 20px;
+}
+.landheading {
+  display: grid;
+  gap: 30px;
+}
+.heading_profile {
+  text-align: center;
   width: 80vw;
 }
-.text {
-  font-weight: 600;
-}
+
 .getstartedbutton {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 .minicardContainer {
   background-color: rgba(103, 97, 97);
@@ -83,27 +76,24 @@
   .dropdown {
     display: none;
   }
-  .heads {
-    font-size: 19px;
-    line-height: 21px;
-  }
 
+  .heading_profile {
+    text-align: center;
+    height: 40vh;
+  }
+  #icon {
+    height: 80px;
+    width: 150px;
+  }
+  .head_profile {
+    display: flex;
+  }
+  .landheading {
+    display: grid;
+    gap: 5px;
+  }
   .getstartedbutton {
-    margin-top: 15px;
     display: grid;
-    justify-content: center;
-    gap: 15px;
-  }
-  .smallHeads {
-    font-size: 14px;
-  }
-  .paras {
-    font-size: 15px;
-    line-height: 16px;
-  }
-  .miniCard {
-    display: grid;
-    justify-content: center;
-    align-items: end;
+    text-align: center;
   }
 }

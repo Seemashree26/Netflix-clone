@@ -1,11 +1,10 @@
 import "./miniCard.css";
-
-const MiniCard = ({ image, content, paragraph }) => {
+import Content from "../content/Content";
+const MiniCard = ({ image, head, text }) => {
   return (
     <div className="miniCard">
       <div className="contentone ">
-        <h1>{content}</h1>
-        <p>{paragraph}</p>
+        <Content head={head} text={text} />
       </div>
       <div className="minicardImage">
         <img src={image} alt="" />

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import axios from "../../libs/axios";
-import Input from "../../components/input/Input";
-import Nav from "../../components/nav/Nav";
+import axios from "../../../libs/axios";
+import Input from "../../../components/input/Input";
+import Nav from "../../../components/nav/Nav";
 import "./searchScreen.css";
-import Button from "../../components/button/Button";
-import Card from "../../components/card/Card";
+import Button from "../../../components/button/Button";
+import Card from "../../../components/card/Card";
 
 const SearchScreen = () => {
   const [search, setSearch] = useState("");
@@ -28,7 +28,6 @@ const SearchScreen = () => {
     if (search) {
       getMovies(search).then((results) => {
         setMovies(results);
-        console.log(search);
       });
     }
   }, [search]);
@@ -41,13 +40,13 @@ const SearchScreen = () => {
         <div className="search_input">
           <Input
             type="search"
-            size="largeInputEmail"
+            size="searchinput"
             placeholder="Search Movies"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
 
-          <Button text={"search"} size="medium" />
+          <Button text={"search"} size="search" />
         </div>
         <div className="search_content">
           {movies?.map((movie) => (

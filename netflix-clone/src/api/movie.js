@@ -154,13 +154,36 @@ export const getWishlist = async () => {
   );
   return response.data;
 };
+const getOptions = {
+  headers: {
+    accept: "application/json",
+    Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
+  },
+};
+export const login = async (body) => {
+  try {
+    const { data } = await axios.get("authentication/token/new", getOptions);
+    const { request_token } = data;
+    const { data: response } = await axios.post(
+      "authentication/token/validate_with_login",
+      { ...body, request_token },
+      getOptions
+    );
 
+    if (response?.success) {
+      localStorage.setItem("user", true);
+    }
+    return response?.success ?? false;
+  } catch (error) {
+    console.log({ error: error.message });
+  }
+};
 export const getPageData = async () => {
   const netflixOriginals = await getFetchNetflixOriginals();
   const trendingNow = await getFetchTrending();
   const topRated = await getFetchTopRated();
   const actionMovies = await getFetchActionMovies();
-  const comedyMoives = await getFetchComedyMovies();
+  const comedyMovies = await getFetchComedyMovies();
   const horrorMovies = await getFetchHorrorMovies();
   const romanceMovies = await getFetchRomanceMovies();
   const warMovies = await getFetchWarMovies();
@@ -171,7 +194,7 @@ export const getPageData = async () => {
     trendingNow,
     topRated,
     actionMovies,
-    comedyMoives,
+    comedyMovies,
     horrorMovies,
     romanceMovies,
     warMovies,

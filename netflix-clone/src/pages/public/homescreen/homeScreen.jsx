@@ -1,9 +1,9 @@
 import "./homeScreen.css";
 import { useState, useEffect } from "react";
-import Nav from "../../components/nav/Nav";
-import Button from "../../components/button/Button";
-import { getPageData } from "../../api/movie";
-import MoviesRow from "../../components/moviesRow/MoviesRow";
+import Nav from "../../../components/nav/Nav";
+import Button from "../../../components/button/Button";
+import { getPageData } from "../../../api/movie";
+import MoviesRow from "../../../components/moviesRow/MoviesRow";
 import "./homeScreen.css";
 const baseUrl = "https://image.tmdb.org/t/p/original";
 
@@ -33,15 +33,13 @@ const HomeScreen = () => {
     return data?.length > n ? data.substring(0, n) + "..." : data;
   };
 
-  // console.log(movie);
-
   const [data, setData] = useState(null);
   useEffect(() => {
     getPageData().then((response) => {
       setData(response);
     });
   }, []);
-  console.log(data);
+
   return (
     <div className="homeScreen">
       <Nav background={"nav_transparent"} />

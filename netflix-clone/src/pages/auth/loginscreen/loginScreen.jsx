@@ -1,26 +1,35 @@
 import { Link, useNavigate } from "react-router-dom";
-import Button from "../../components/button/Button";
-import Input from "../../components/input/Input";
-import Footer from "../../components/footer/Footer";
+import Button from "../../../components/button/Button";
+import Input from "../../../components/input/Input";
+import Footer from "../../../components/footer/Footer";
 import { useState } from "react";
 import "./loginScreen.css";
+import { login } from "../../../api/movie";
 const LoginScreen = () => {
-  const [mailId, setMailId] = useState("");
-  const [password, setPassword] = useState("");
-
   const navigator = useNavigate();
-  const handleLogin = () => {
-    const storedData = JSON.parse(localStorage.getItem("userData"));
 
-    if (
-      storedData &&
-      mailId === storedData.mailId &&
-      password === storedData.password
-    ) {
-      console.log("Login successful!");
+  const initialState = {
+    username: "",
+    password: "",
+  };
+  const [user, setUser] = useState(initialState);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log("Form submitted:", user);
+    const response = await login(user);
+    console.log({ response });
+    if (response) {
+      navigator("/home");
     } else {
-      console.log("Invalid mailId or password");
+      alert("Invalid email and password");
     }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    console.log(name, value);
+    setUser({ ...user, [name]: value });
   };
   return (
     <div className="loginScreen">
@@ -32,55 +41,56 @@ const LoginScreen = () => {
           />
         </div>
         <div className="signinform">
-          <div className="container_signin">
-            <h1 className="head_signin">Sign In</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="container_signin">
+              <h1 className="head_signin">Sign In</h1>
 
-            <Input
-              type="email"
-              placeholder="Email or Phone number"
-              size="smallInputEmail"
-              value={mailId}
-              onChange={(e) => setMailId(e.target.value)}
-            />
-            <Input
-              type="password"
-              placeholder="Password"
-              size="smallInputEmail"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+              <Input
+                name="username"
+                type="text"
+                size="smallInputEmail"
+                placeholder="Email or Phone number"
+                value={user.username}
+                onChange={handleChange}
+              />
+              <Input
+                type="password"
+                placeholder="Password"
+                size="smallInputEmail"
+                name="password"
+                value={user.password}
+                onChange={handleChange}
+              />
+              <Button text="Sign In" size="largeSignin" />
 
-            <Link to="/home">
-              <Button text="Sign In" size="largeSignin" onClick={handleLogin} />
-            </Link>
-
-            <div className="middle">
-              <div>
-                <Input type="checkbox" />
-                <label for="remember">Remember Me</label>
-              </div>
-              <Link to="/" className="need_help">
-                Need help?
-              </Link>
-            </div>
-            <div className="bottom">
-              <div className="signup">
-                <h4>New to Netflix?</h4>
-                <Link to="/signup" className="signup_button">
-                  Sign up now.
+              <div className="middle">
+                <div>
+                  <Input type="checkbox" />
+                  <label for="remember">Remember Me</label>
+                </div>
+                <Link to="/" className="need_help">
+                  Need help?
                 </Link>
               </div>
-              <div className="botVerify">
-                <p>
-                  This page is protected by Google reCAPTCHA to ensure you're
-                  not a bot.
-                  <span>
-                    <a href="#"> Learn more. </a>
-                  </span>
-                </p>
+              <div className="bottom">
+                <div className="signup">
+                  <h4>New to Netflix?</h4>
+                  <Link to="/signup" className="signup_button">
+                    Sign up now.
+                  </Link>
+                </div>
+                <div className="botVerify">
+                  <p>
+                    This page is protected by Google reCAPTCHA to ensure you're
+                    not a bot.
+                    <span>
+                      <a href="#"> Learn more. </a>
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
         <div className="foot_div">
           <Footer />

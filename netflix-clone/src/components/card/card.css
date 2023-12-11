@@ -1,8 +1,8 @@
 .movie-card {
   position: relative;
-  min-width: 220px;
-  height: 200px;
-  margin: 10px;
+  min-width: 235px;
+  height: 150px;
+  margin-left: 10px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

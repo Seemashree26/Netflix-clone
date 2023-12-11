@@ -25,13 +25,12 @@ const Nav = ({ background }) => {
         </Link>
       </div>
       <div className="nav_right">
-        <Link to="/profile">
-          <img
-            src="https://i.pinimg.com/564x/5b/50/e7/5b50e75d07c726d36f397f6359098f58.jpg"
-            alt="Avatar"
-            className="nav_avatar"
-          />
-        </Link>
+        <img
+          src="https://i.pinimg.com/564x/5b/50/e7/5b50e75d07c726d36f397f6359098f58.jpg"
+          alt="Avatar"
+          className="nav_avatar"
+        />
+
         <Link to="/signout" className="nav_content">
           <Button text="Sign Out" size="small" />
         </Link>
