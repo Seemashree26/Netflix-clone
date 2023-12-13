@@ -1,13 +1,5 @@
 import "./input.css";
-const Input = ({
-  type,
-  name = "",
-  value,
-  color = "white",
-  placeholder,
-  size,
-  onChange,
-}) => {
+const Input = ({ type, name = "", value, placeholder, size, onChange }) => {
   return (
     <>
       <input
@@ -15,7 +7,6 @@ const Input = ({
         name={name}
         type={type}
         value={value}
-        color={color}
         placeholder={placeholder}
         onChange={onChange}
       />

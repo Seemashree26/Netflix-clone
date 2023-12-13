@@ -35,7 +35,7 @@ const SearchScreen = () => {
   return (
     <>
       <div className="searchScreen">
-        <Nav />
+        <Nav background={"nav_black"} />
 
         <div className="search_input">
           <Input

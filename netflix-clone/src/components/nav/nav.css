@@ -41,3 +41,36 @@
 .nav_content {
   text-decoration: none;
 }
+.navicon_button {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav_logo {
+    width: 120px;
+    height: 80px;
+  }
+  .nav_content {
+    display: none;
+  }
+  .nav_avatar {
+    display: none;
+  }
+  .navicon_button {
+    display: block;
+    border: none;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    font-size: 30px;
+  }
+  .nav_left {
+    width: 200px;
+  }
+  .nav_right {
+    margin-left: 200px;
+  }
+}

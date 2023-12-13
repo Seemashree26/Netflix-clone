@@ -1,8 +1,8 @@
 .movie-card {
   position: relative;
-  min-width: 235px;
-  height: 150px;
-  margin-left: 10px;
+  min-width: 245px;
+  height: 170px;
+  margin: 15px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,23 +36,35 @@
   scale: 1.1;
 }
 
-h3 {
-  margin: 0;
+.movie_name h3 {
   font-size: 1.2rem;
   color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.wishlist-button {
+.card-button {
   background: none;
   border: none;
   color: #fff;
   font-size: 1.5rem;
-  cursor: pointer;
 }
 
 .wishlist-selected {
   color: red;
 }
-.fav-buff > button {
-  margin-right: 20px;
+.fav-button > button {
+  margin-bottom: 60px;
+  margin-left: 190px;
+}
+@media screen and (max-width: 375px) {
+  .movie-card {
+    position: relative;
+    min-width: 280px;
+    height: 170px;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 }

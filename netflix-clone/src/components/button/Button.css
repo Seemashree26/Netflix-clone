@@ -61,4 +61,7 @@
     height: 50px;
     font-size: 18px;
   }
+  .search {
+    margin-left: 60px;
+  }
 }

@@ -1,9 +1,43 @@
 .myList {
   background-color: black;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
+.myList h1 {
+  color: white;
+  font-size: 40px;
+  padding: 20px;
 }
 .my-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  gap: 20px;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 375px) {
+  .myList {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+  }
+  .myList h1 {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+    padding: 5px;
+  }
+  .my-list {
+    display: grid;
+    grid-template-columns: 380px;
+    gap: 10px;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+  }
 }
