@@ -27,8 +27,10 @@ const Footer = () => {
           <a href="">000-800-919-1694</a>
         </p>
         <div className="footer-content">
-          {content.map((item) => (
-            <Link to={item.href}>{item.name}</Link>
+          {content.map((item, index) => (
+            <Link to={item.href} key={index}>
+              {item.name}
+            </Link>
           ))}
         </div>
         <div className="selection">

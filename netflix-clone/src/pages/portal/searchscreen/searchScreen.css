@@ -1,6 +1,7 @@
 .searchScreen {
   background-color: black;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 .search_input {
   display: flex;
@@ -11,4 +12,22 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  margin-top: 50px;
+}
+@media screen and (max-width: 375px) {
+  .searchScreen {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+  }
+  .search_input {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+  }
+  .search_content {
+    display: grid;
+    background-color: black;
+    grid-template-columns: 1fr;
+  }
 }

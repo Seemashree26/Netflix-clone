@@ -41,59 +41,65 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <div className="homeScreen">
-      <Nav background={"nav_transparent"} />
-      <div className="banner">
-        <img
-          src={`${baseUrl + movie?.backdrop_path}`}
-          alt="Poster"
-          loading="lazy"
-        />
-      </div>
-
-      <div className="banner_content">
-        <h1>{movie?.name}</h1>
-
-        <div className="banner_buttons">
-          <Button text={"Play"} />
-          <Button text={"Watch Later"} />
+    <>
+      <div className="homeScreen">
+        <Nav background={"nav_transparent"} />
+        <div className="banner">
+          <img
+            src={`${baseUrl + movie?.backdrop_path}`}
+            alt="Poster"
+            className="banner_image"
+            loading="lazy"
+          />
         </div>
-        <div className="banner_description">
-          <p>{handleDescription(movie?.overview, 200)}</p>
+
+        <div className="banner_content">
+          <h1>{movie?.name}</h1>
+
+          <div className="banner_buttons">
+            <Button text={"Play"} />
+            <Button text={"Watch Later"} />
+          </div>
+          <div className="banner_description">
+            <p>{handleDescription(movie?.overview, 200)}</p>
+          </div>
+        </div>
+
+        <div className="bannerfade_bottom" />
+
+        <div className="row_posters">
+          <h2>NETFLIX ORIGINALS</h2>
+          <MoviesRow data={data?.netflixOriginals?.results} />
+
+          <h2>TRENDING NOW</h2>
+          <MoviesRow data={data?.trendingNow?.results} />
+
+          <h2>TOP RATED</h2>
+          <MoviesRow data={data?.topRated?.results} />
+
+          <h2>ACTION MOVIES</h2>
+          <MoviesRow data={data?.actionMovies?.results} />
+
+          <h2>HORROR MOVIES</h2>
+          <MoviesRow data={data?.horrorMovies?.results} />
+
+          <h2>ROMANCE MOVIES</h2>
+          <MoviesRow data={data?.romanceMovies?.results} />
+
+          <h2>WAR MOVIES</h2>
+          <MoviesRow data={data?.warMovies?.results} />
+
+          <h2>COMEDY MOVIES</h2>
+          <MoviesRow data={data?.comedyMovies?.results} />
+
+          <h2>SCIENCE MOVIES</h2>
+          <MoviesRow data={data?.scienceFictionMovies?.results} />
+
+          <h2>DOCUMENTARIES</h2>
+          <MoviesRow data={data?.documentaries?.results} />
         </div>
       </div>
-      <div className="bannerfade_bottom" />
-
-      <div className="row_posters">
-        <h2>NETFLIX ORIGINALS</h2>
-        <MoviesRow data={data?.netflixOriginals?.results} />
-
-        <h2>TRENDING NOW</h2>
-        <MoviesRow data={data?.trendingNow?.results} />
-
-        <h2>TOP RATED</h2>
-        <MoviesRow data={data?.topRated?.results} />
-
-        <h2>ACTION MOVIES</h2>
-        <MoviesRow data={data?.actionMovies?.results} />
-
-        <h2>HORROR MOVIES</h2>
-        <MoviesRow data={data?.horrorMovies?.results} />
-
-        <h2>ROMANCE MOVIES</h2>
-        <MoviesRow data={data?.romanceMovies?.results} />
-
-        <h2>WAR MOVIES</h2>
-        <MoviesRow data={data?.warMovies?.results} />
-
-        <h2>SCIENCE MOVIES</h2>
-        <MoviesRow data={data?.scienceFictionMovies?.results} />
-
-        <h2>DOCUMENTARIES</h2>
-
-        <MoviesRow data={data?.documentaries?.results} />
-      </div>
-    </div>
+    </>
   );
 };
 

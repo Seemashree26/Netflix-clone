@@ -1,5 +1,6 @@
 import Button from "../button/Button";
 import { Link } from "react-router-dom";
+import { IoMenuSharp } from "react-icons/io5";
 import "./nav.css";
 
 const Nav = ({ background }) => {
@@ -34,6 +35,9 @@ const Nav = ({ background }) => {
         <Link to="/signout" className="nav_content">
           <Button text="Sign Out" size="small" />
         </Link>
+        <button className="navicon_button">
+          <IoMenuSharp />
+        </button>
       </div>
     </nav>
   );
